@@ -1,10 +1,13 @@
 <?php
 // adapted from Mr. Hrishabh Sharma's work at TechnologyMantraBlog.com
+include_once( dirname(__FILE__) . "/../credentials.php");
 
 require_once("functions.php");
 
 function loadVideo($category = null)
 {
+    global $token;
+
     $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : '';
     if (is_array($category)) {
         foreach ($category as $cat) {
@@ -18,14 +21,11 @@ function loadVideo($category = null)
         urlencode(getPublishAfterDate()),
         "&publishedBefore=",
         urlencode(getPublishBeforeDate()),
-        "&maxResults=50&order=viewCount&type=video&",
-        "key=",
+        "&maxResults=50&order=viewCount&type=video&key=",
+        $token
         );
-
-    $response = file_get_contents(implode('', $req_url_items));
-
+    $response = file_get_contents(implode("", $req_url_items));
     $searchResponse = json_decode($response, true);
-    
     /*
     ** Get all ID's, fetch video statistics from youtube API in single connection, assign view and like count to $youtube_data array
     */
