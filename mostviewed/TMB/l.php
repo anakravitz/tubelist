@@ -13,7 +13,16 @@ function loadVideo($category = null)
         }
     }
 
-    $response = file_get_contents("https://www.googleapis.com/youtube/v3/search?part=snippet&videoCategoryId=$category&safeSearch=none&publishedAfter=" . urlencode(getPublishAfterDate()) . "&publishedBefore=" . urlencode(getPublishBeforeDate()) . "&maxResults=50&order=viewCount&type=video&key=
+    $req_url_items =  Array(
+        "https://www.googleapis.com/youtube/v3/search?part=snippet&videoCategoryId=$category&safeSearch=none&publishedAfter=",
+        urlencode(getPublishAfterDate()),
+        "&publishedBefore=",
+        urlencode(getPublishBeforeDate()),
+        "&maxResults=50&order=viewCount&type=video&",
+        "key=",
+        );
+
+    $response = file_get_contents(implode('', $req_url_items));
 
     $searchResponse = json_decode($response, true);
     
