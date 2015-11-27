@@ -1,0 +1,328 @@
+
+/*adapted from Mr. Hrishabh Sharma's work at TechnologyMantraBlog.com*/
+
+.header {
+    padding-top: 60px;
+    padding-left: 20px;
+    width: 100%;
+}
+
+a:hover {
+        text-decoration: none;
+}
+
+h1 {
+    font-size: 2.5vw;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.searchBox {
+    width: 100%;
+    height: auto;
+    border: #999999 1px solid;
+    margin-top: 10px;
+}
+
+.videoItemContainer {
+    width: 150px;
+    height: 180px;
+    margin: 6px;
+    text-align: center;
+    padding: 5px;
+    overflow: hidden;
+    float: left;
+    border: red 2px solid;
+
+    -webkit-box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.75);
+
+    background: rgba(226, 226, 226, 1);
+    }
+
+.videoItemImage img {
+    cursor: pointer;
+}
+
+.videoItemCaption {
+    cursor: move;
+}
+
+.videoList {
+    height: 720px;
+    overflow: auto;
+    border-left: #E4E4E4 1px solid;
+    border-right: #E4E4E4 1px solid;
+    border-top: #E4E4E4 1px solid;
+}
+
+.footer {
+    background: #333333;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin-top: 10px;
+    color: #CCCCCC;
+    padding: 10px;
+}
+
+.videoDetailContainer {
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0); /* IE6-9 */
+
+    width: 100%;
+    height: 800px;
+    border: #999999 1px solid;
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    overflow: auto;
+}
+
+.vidContainer {
+    text-align: center;
+}
+
+.vidTitle {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+.vidDesc {
+    margin-top: 8px;
+}
+
+#relativeList {
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+    text-align: center;
+}
+
+
+#playerContainer {
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0); /* IE6-9 */
+
+    width: 100%;
+    height: 350px;
+    border: #999999 1px solid;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+#playList {
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0); /* IE6-9 */
+
+    width: 100%;
+    height: 440px;
+    border: #999999 1px solid;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+    overflow: auto;
+}
+
+
+.videoItemContainer {
+    position: relative;
+}
+
+.videoItemContainer .videoMeta {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 5px;
+    background: rgba(204, 47, 47, 0.54);
+    display: none;
+    color:#ffffff;
+    font-size:11px;
+    text-align: left;
+    border-radius:5px;
+}
+
+.videoItemContainer:hover .videoMeta {
+    display: block;
+}
+
+.youtube_views {
+    padding: 0 0 0 20px;
+}
+
+.youtube_likes {
+    padding: 0 20px 0 10px;
+}
+
+.textTitle {
+    color: blue;
+    cursor: pointer;
+}
+
+.pager li>a, .pager li>span {
+    display: inline-block;
+    padding: 5px 40px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.form-control {
+    margin-right: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    background-color: #DDE2E0;
+    padding: 20px;
+}
+
+
+.page-header {
+        margin-top: 60px;
+}
+
+.dropdown-toggle {
+    font-weight: bold;
+}
+
+.panel-default>.panel-heading {    
+    margin-top: 60px;
+}
+
+
+/*from http://stackoverflow.com/questions/13562658/twitter-bootstrap-multi-column-dropdown*/
+.dropdown-menu.multi-column {
+        width: 560px;
+}
+
+.dropdown-menu.multi-column .dropdown-menu {
+        display: block !important;
+        position: static !important;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        min-width:100px;
+}
+
+.listButton {
+    background-color: #DDE2E0; 
+    margin-top:20px;
+    width: 170px;
+    height:30px;   
+    line-height:30px;   
+    margin-bottom: -12px;
+    border: #999999 1px solid;
+    border-bottom: 0;
+    border-radius:4px;
+    }
+
+.listButton:hover {
+    background-color: #CECECE;
+    border: #999999 1px solid;
+    border-bottom: 0;
+    cursor: pointer;
+        }
+
+
+
+.listButton a {
+    text-decoration:none;
+    font-weight: normal;
+    color:#615858;
+    display:block;
+    }   
+
+table {
+  width: 100%;
+  border: 1px solid #000;
+}
+
+th, td {text-align:right;
+}   
+
+
+/*custom Boostrap navbar from http://work.smarchal.com/twbscolor/css/9c13058d332afffffff6e0e10*/
+.navbar-default {
+  background-color: #9c1305;
+  border-color: #8d332a;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #f6e0e1;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #f6e0e1;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #f6e0e1;
+  background-color: #8d332a;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #f6e0e1;
+  background-color: #8d332a;
+}
+.navbar-default .navbar-toggle {
+  border-color: #8d332a;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #8d332a;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #f6e0e1;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #f6e0e1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #f6e0e1;
+    background-color: #8d332a;
+  }
+}
+
+/*end of custom Boostrap navbar*/
